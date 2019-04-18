@@ -7,9 +7,11 @@ aaaa
 if(bbb == "123")
 {
 	return ;
+	aaaaaaa
 }
 else
 {
+mmmmmmm
 	echo "aaa";
 }
 
