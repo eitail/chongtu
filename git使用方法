@@ -1,0 +1,52 @@
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/eitail/chongtu.git
+git push -u origin master
+
+git remote add origin https://github.com/eitail/chongtu.git
+git push -u origin master
+
+提交前
+git pull origin master:cch//将远程仓库pull到本地
+若远程版本小于等于本地，直接合并本地
+若远程版本高于本地，又不一样的，会提示
+ ! [已拒绝]          master     -> cch  (非快进)
+
+ 解决方法：
+ 1：创建分支，将远端高版本克隆下来（master）
+ 2:重新git checkout cch
+ 3：git merge master  //merge,高版本仓库
+ 提示：
+ error: 您对下列文件的本地修改将被合并操作覆盖：
+	index.txt
+请在合并前提交或贮藏您的修改。
+终止中
+
+原因是，低版本的内容，没有add 一下
+在分支cch下
+git add .
+git commit -m "edit bbb"
+
+还是pull不下来
+开始合并 git merge master
+
+提示
+自动合并 index.txt
+冲突（内容）：合并冲突于 index.txt
+自动合并失败，修正冲突然后提交修正的结果。
+
+我们知道index.txt有冲突。
+打开这个文件，进行修改。保存。
+git add .
+git commit -m "edit bb*100100"
+
+提交成功，远程仓库改变
+git push origin cch:master
+
+
+
+
+
+
+
