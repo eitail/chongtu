@@ -2,10 +2,17 @@ index.txt
 
 aaaa
 
-111
-22222222
 
-if(aaa == "123")
+
+if(bbb == "123")
 {
 	return ;
 }
+else
+{
+	echo "aaa";
+}
+
+
+111
+22222222
